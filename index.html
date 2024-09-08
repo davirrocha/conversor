@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Conversor</title>
+</head>
+
+<body>
+    <header>
+
+        <h2 class="title">Conversor de moedas</h2>
+
+        <div>
+            <input type="checkbox" class="checkbox" id="chk">
+
+            <label for="chk" class="label">
+                <img src="./assets/lua-img.png" alt="">
+                <img src="./assets/sol-img.png" alt="">
+                <div class="ball"></div>
+            </label>
+
+        </div>
+    </header>
+
+
+    <section>
+        <div class="box-input">
+
+            <select name="" id="select">
+                <option value="real">R$ Real Brasileiro</option>
+            </select>
+
+            <select name="" id="select" class="convert-to">
+                <option value="">Selecione uma Moeda</option>
+                <option value="dolar">US$ Dolar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="libra">£ Libra Esterlina</option>
+                <option value="yen">¥ Iene Japonês</option>
+                <option value="btc">₿ Bitcoin</option>
+            </select>
+
+        </div>
+
+        <div class="box-input">
+            <input type="number" class="input" id="input" placeholder="Insira um Valor" />
+        </div>
+
+        <div class="bottom">
+            <i class="fa-regular fa-arrow-down" id="icon"></i>
+            <h3 class="text">$0.00 </h3>
+        </div>
+        <button class="button">Converter</button>
+
+    </section>
+
+
+</body>
+<script src="./scripts.js"></script>
+<script src="./styles.js"></script>
+<script src="https://kit.fontawesome.com/054ee8968e.js" crossorigin="anonymous"></script>
+
+</html>

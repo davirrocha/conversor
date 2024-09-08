@@ -1,0 +1,262 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Manrope", sans-serif;
+ }
+
+
+ body {
+     height: 100vh;
+     background-color: #282a36;
+     transition: background .3s linear;
+ }
+
+ body.light {
+     background-color: #dcdcdc;
+ }
+
+
+ header {
+     height: 12vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 30px;
+
+     img {
+         width: 18px
+     }
+ }
+
+
+ .title {
+     color: #e1e1e1;
+     font-weight: 300;
+ }
+
+ .title.light {
+     color: rgb(0, 0, 0);
+ }
+
+
+ .checkbox {
+     opacity: 0;
+     position: absolute;
+
+ }
+
+ .label {
+     background-color: #000;
+     border-radius: 50px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 5px;
+     position: relative;
+     height: 26px;
+     width: 50px;
+     transform: scale(1.5);
+ }
+
+
+ .label .ball {
+     background-color: #fff;
+     border-radius: 50%;
+     position: absolute;
+     top: 2px;
+     left: 2px;
+     height: 22px;
+     width: 22px;
+
+     transform: translateX(24px);
+     transition: .3s;
+ }
+
+ .checkbox:checked+.label .ball {
+     transform: translateX(0px);
+     transition: .3s;
+
+ }
+
+ section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 80vh;
+     gap: 40px;
+     flex-direction: column;
+ }
+
+
+
+ .box-input {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+ }
+
+
+ select {
+     width: 290px;
+     height: 80px;
+     outline: none;
+     padding: 5px;
+     font-size: 19px;
+     font-weight: 500;
+     border: 2px solid rgba(169, 169, 169, .4);
+     border-radius: 5px;
+     background-color: rgb(40, 42, 54);
+     color: #e1e1e1;
+ }
+
+ #select.light {
+     background-color: rgb(220, 220, 220);
+     color: #000000;
+
+     &:focus {
+         border-color: #57489b;
+         transition: .5s;
+     }
+ }
+
+ select:hover {
+     border-color: #000000;
+ }
+
+
+ select:focus {
+     border-color: #00ff7f;
+     transition: .5s;
+ }
+
+
+ .input {
+     width: 290px;
+     height: 80px;
+     border: none;
+     border-bottom: 2px solid #000000;
+     outline: none;
+     font-size: 30px;
+     padding: 5px;
+     font-weight: 300;
+     background-color: transparent;
+     color: rgb(225, 225, 225);
+ }
+
+ .input.light {
+     color: rgb(0, 0, 0);
+
+     &:focus {
+         background-color: rgba(169, 169, 169, .3);
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         border-color: #57489b;
+
+     }
+
+ }
+
+ .input:hover {
+     background-color: rgba(169, 169, 169, .4);
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+ }
+
+
+ .input:focus {
+     background-color: rgba(169, 169, 169, 0.302);
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+     border-color: #00ff7f;
+     transition: .5s;
+ }
+
+ .input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+ }
+
+ .bottom {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 20px;
+ }
+
+ #icon {
+     font-weight: 900;
+     font-size: 50px;
+     color: #00ff7f;
+ }
+
+
+ #icon.light {
+     color: #57489b;
+ }
+
+ h3 {
+     color: #fff;
+     font-size: 30px;
+     font-weight: 700;
+
+ }
+
+ h3.light {
+     color: #000;
+ }
+
+ button {
+     width: 230px;
+     height: 43px;
+     border-radius: 20px;
+     border: none;
+     font-weight: 800;
+     color: #000;
+     background-color: #00ff7f;
+     cursor: pointer;
+ }
+
+ button.light {
+     color: #fff;
+     background-color: #57489b;
+
+     &:hover {
+         opacity: .9;
+     }
+
+     &:active {
+         opacity: .7;
+     }
+ }
+
+ button:hover {
+     opacity: .7;
+
+
+ }
+
+ button:active {
+     opacity: .5;
+ }
+
+ @media screen and (max-width: 600px) {
+     header {
+         padding: 20px;
+     }
+
+     section {
+         height: 90vh;
+     }
+
+     .box-input {
+         flex-direction: column;
+     }
+
+     button {
+         /* width: 50%; */
+         height: 43px;
+     }
+ }
